@@ -12,6 +12,7 @@ use Doctrine\ODM\MongoDB\Mapping\MappingException;
 use Doctrine\ODM\MongoDB\Types\Type;
 use Doctrine\Persistence\Mapping\Driver\MappingDriver;
 use Hyperf\Contract\ConfigInterface;
+use InvalidArgumentException;
 use MongoDB\Client;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
@@ -37,12 +38,27 @@ class DoctrineDocumentManagerFactory
      */
     public function __invoke(ContainerInterface $container): DocumentManager
     {
-        $this->doctrineConfig = $container->get(ConfigInterface::class)->get('doctrine-odm');
+        $this->setDoctrineConfig($container->get(ConfigInterface::class)->get('doctrine-odm'));
 
         return DoctrineDocumentManager::create(
             $this->createConnection(),
             $this->createConfiguration()
         );
+    }
+
+    /**
+     * @param array $doctrineConfig
+     */
+    private function setDoctrineConfig(array $doctrineConfig)
+    {
+        if (empty($this->doctrineConfig['connection']['server'])
+            || empty($this->doctrineConfig['connection']['database'])) {
+            throw new InvalidArgumentException(
+                'Database configuration is empty. Please set connection.server and connection.database values.'
+            );
+        }
+
+        $this->doctrineConfig = $doctrineConfig;
     }
 
     /**

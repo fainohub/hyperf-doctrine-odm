@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 return [
     'connection' => [
-        'server' => env('MONGO_DB_DSN'),
-        'database' => env('MONGO_DB_DATABASE'),
+        'server' => env('MONGO_DB_DSN', 'mongodb://mongodb:27017'),
+        'database' => env('MONGO_DB_DATABASE', 'db'),
     ],
 
     'hydrator' => [
