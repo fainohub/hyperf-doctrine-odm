@@ -16,7 +16,6 @@ use const OpenTracing\Tags\SPAN_KIND_RPC_CLIENT;
 /**
  * Class MongoTracerAspect
  * @package FainoHub\HyperfDoctrineODM\Aspect
- * @Aspect
  */
 class MongoTracerAspect implements AroundInterface
 {
