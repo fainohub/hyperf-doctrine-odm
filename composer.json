@@ -16,6 +16,9 @@
     "hyperf/config": "~2.2.0",
     "psr/http-server-middleware": "^1.0"
   },
+  "suggest": {
+    "hyperf/tracer": "Required to use MongoDB Tracer."
+  },
   "autoload" : {
     "psr-4" : {
       "FainoHub\\HyperfDoctrineODM\\" :  "src/"
