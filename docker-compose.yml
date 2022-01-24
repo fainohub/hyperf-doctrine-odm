@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  image:
+    container_name: hyperf-doctrine-odm.image
+    image: hyperf-doctrine-odm
+    command: list
+    build: .
+
+  composer:
+    container_name: hyperf-doctrine-odm.composer
+    image: hyperf-doctrine-odm
+    depends_on:
+      - image
+    entrypoint: composer
+    volumes:
+      - ./:/app

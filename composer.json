@@ -1,0 +1,29 @@
+{
+  "name": "fainohub/hyperf-doctrine-odm",
+  "description": "Hyperf Doctrine ODM",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Thiago Faino",
+      "email": "thiagofaino@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "doctrine/mongodb-odm": "^2.2",
+    "hyperf/command": "~2.2.0",
+    "hyperf/config": "~2.2.0",
+    "psr/http-server-middleware": "^1.0"
+  },
+  "autoload" : {
+    "psr-4" : {
+      "FainoHub\\HyperfDoctrineODM\\" :  "src/"
+    }
+  },
+  "extra": {
+    "hyperf": {
+      "config": "FainoHub\\HyperfDoctrineODM\\ConfigProvider"
+    }
+  }
+}
