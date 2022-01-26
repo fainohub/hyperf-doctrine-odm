@@ -79,7 +79,7 @@ class DoctrinePersistentCollectionCommand extends HyperfCommand
         }
 
         $config = $this->container->get(ConfigInterface::class);
-        $persistentCollections = $config->get('doctrine.persistent_collections');
+        $persistentCollections = $config->get('doctrine-odm.persistent_collections');
 
         if (count($persistentCollections)) {
             $generator = $dm->getConfiguration()->getPersistentCollectionGenerator();
