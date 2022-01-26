@@ -51,8 +51,8 @@ class DoctrineDocumentManagerFactory
      */
     private function setDoctrineConfig(array $doctrineConfig)
     {
-        if (empty($this->doctrineConfig['connection']['server'])
-            || empty($this->doctrineConfig['connection']['database'])) {
+        if (empty($doctrineConfig['connection']['server'])
+            || empty($doctrineConfig['connection']['database'])) {
             throw new InvalidArgumentException(
                 'Database configuration is empty. Please set connection.server and connection.database values.'
             );
