@@ -21,7 +21,7 @@ class ConfigProvider
     {
         return [
             'dependencies' => [
-                DoctrineDocumentManager::class => DoctrineDocumentManagerFactory::class
+
             ],
             'commands' => [
                 DoctrineProxyCommand::class,
