@@ -1,6 +1,9 @@
 # Hyperf Doctrine ODM
 Doctrine MongoDB Object Document Mapper (ODM) for Hyperf framework.
 
+### Notice: coroutines are not supported
+
+
 ## Installation
 ```
 composer require fainohub/hyperf-doctrine-odm
