@@ -16,8 +16,8 @@
   "require": {
     "php": ">=7.4",
     "doctrine/mongodb-odm": "^2.2",
-    "hyperf/command": "~2.2.0",
-    "hyperf/config": "~2.2.0",
+    "hyperf/command": "~2.2.0|^3.0",
+    "hyperf/config": "~2.2.0|^3.0",
     "psr/http-server-middleware": "^1.0"
   },
   "autoload" : {
