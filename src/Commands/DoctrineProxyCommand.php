@@ -27,7 +27,7 @@ class DoctrineProxyCommand extends HyperfCommand
     /**
      * @var string
      */
-    protected $name = 'doctrine:generate-proxies';
+    protected ?string $name = 'doctrine:generate-proxies';
 
     /**
      * @param ContainerInterface $container
