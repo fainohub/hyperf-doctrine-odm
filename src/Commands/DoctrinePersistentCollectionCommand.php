@@ -26,7 +26,7 @@ class DoctrinePersistentCollectionCommand extends HyperfCommand
     /**
      * @var string
      */
-    protected $name = 'doctrine:generate-persistent-collections';
+    protected ?string $name = 'doctrine:generate-persistent-collections';
 
     /**
      * @param ContainerInterface $container

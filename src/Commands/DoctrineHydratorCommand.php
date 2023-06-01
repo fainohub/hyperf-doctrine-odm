@@ -25,7 +25,7 @@ class DoctrineHydratorCommand extends HyperfCommand
     /**
      * @var string
      */
-    protected $name = 'doctrine:generate-hydrators';
+    protected ?string $name = 'doctrine:generate-hydrators';
 
     /**
      * @param ContainerInterface $container
