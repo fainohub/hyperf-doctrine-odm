@@ -17,7 +17,7 @@
     "php": ">=7.4",
     "doctrine/mongodb-odm": "^2.2",
     "hyperf/command": "^3.1",
-    "hyperf/config": "ˆ3.1",
+    "hyperf/config": "^3.1",
     "psr/http-server-middleware": "^1.0"
   },
   "autoload" : {
